@@ -1,0 +1,27 @@
+.banner {
+  position: relative;
+  height: 111px;
+  margin-top: 60px;
+  width: 90%;
+  margin: 10px auto;
+}
+.banner img {
+  position: relative;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 90%;
+  height: 100%;
+  width: 100%;
+  opacity: 30%;
+}
+
+.banner h2 {
+  width: 217px;
+  color: white;
+  line-height: 24px;
+  font-size: 24px;
+  font-weight: 500;
+  position: absolute;
+  left: 5%;
+  top: 23%;
+}

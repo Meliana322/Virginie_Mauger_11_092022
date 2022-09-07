@@ -1,0 +1,116 @@
+/* ! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+* {
+  font-family: Montserrat;
+}
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  height: 100vh;
+  min-height: 100%;
+}
+
+body {
+  height: 100vh;
+  min-height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+
+.App {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main {
+  max-width: 1440px;
+  padding: 30px 50px 0 50px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  right: 0;
+}
+
+main {
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  header,
+  main {
+    padding: 22px 20px 0 20px;
+  }
+}

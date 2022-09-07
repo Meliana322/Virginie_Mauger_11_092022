@@ -1,0 +1,55 @@
+/* * {
+  font-family: Montserrat;
+} */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 5px;
+  justify-content: center;
+}
+
+.link {
+  white-space: nowrap;
+  font-size: 12px;
+  color: #ff6060;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 145px;
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 210px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .logo {
+    width: 210px;
+  }
+  .list {
+  }
+  .link {
+    font-size: 24px;
+  }
+}
