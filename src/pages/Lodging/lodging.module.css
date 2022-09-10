@@ -1,3 +1,38 @@
-.lodging {
-  height: 255px;
+.slide {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 335px;
+  margin: auto;
+}
+
+.button {
+  cursor: pointer;
+  background-color: unset;
+  border: unset;
+  position: absolute;
+}
+
+.prevSlide,
+.nextSlide {
+  position: absolute;
+  cursor: pointer;
+  background-color: unset;
+  border: unset;
+  color: white;
+}
+.prevSlide {
+  left: 0;
+}
+
+.nextSlide {
+  right: 0;
+}
+.prevSlide svg,
+.nextSlide svg {
+  width: 12px;
+}
+
+.image img {
+  border-radius: 10px;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Banner from '../../components/banner/Banner'
 import banner from '../../assets/image.jpg'
 import Thumb from '../../components/Thumb/Thumb'
@@ -13,11 +13,9 @@ export default function Home(props) {
       </Banner>
       <div className={styles.gallery}>
         {props.locationList.map((location) => (
-          <Thumb
-            key={location.id}
-            title={location.title}
-            imgSrc={location.cover}
-          />
+          <Link key={location.id} to={`/Lodging/${location.id}`}>
+            <Thumb title={location.title} imgSrc={location.cover} />
+          </Link>
         ))}
       </div>
     </>

@@ -21,8 +21,6 @@ function App() {
       })
   }, [])
 
-  //
-
   if (isLoading) return <div>Loading...</div>
   return (
     <>
@@ -31,9 +29,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home locationList={locationList} />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Lodging" element={<Lodging />} />
           <Route path="*" element={<Error />} />
         </Routes>
+      </div>
+      <div>
+        <Lodging />
       </div>
     </>
   )
