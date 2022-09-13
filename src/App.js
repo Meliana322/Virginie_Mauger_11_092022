@@ -13,13 +13,15 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    fetch('data.json')
+    fetch('/data.json')
       .then((resp) => resp.json())
       .then((data) => {
         setIsLoading(false)
         setLocationList(data)
       })
   }, [])
+
+  // console.log(locationList[0].id)
 
   if (isLoading) return <div>Loading...</div>
   return (
@@ -28,12 +30,13 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home locationList={locationList} />} />
-          <Route path="/About" element={<About />} />
+          <Route
+            path="/lodging/:userId"
+            element={<Lodging locationList={locationList} />}
+          />
+          <Route path="About" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
-      </div>
-      <div>
-        <Lodging />
       </div>
     </>
   )
