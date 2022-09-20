@@ -1,3 +1,4 @@
+/* Mobile*/
 .footer {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,8 @@
   justify-content: center;
   height: 209px;
   background-color: black;
+  margin-top: auto;
+  width: 100%;
 }
 .logo {
   height: 40px;
@@ -16,4 +19,22 @@
 .rights {
   color: #ffffff;
   font-size: 12px;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+}
+
+/* Tablette*/
+@media screen and (min-width: 768px) {
+  .rights {
+    font-size: 18px;
+  }
+}
+/* Desktop*/
+@media screen and (min-width: 992px) {
+  .rights {
+    font-size: 24px;
+  }
 }

@@ -7,6 +7,7 @@ import About from './pages/About/About'
 import Error from './pages/404/404'
 import { Routes, Route } from 'react-router-dom'
 import Lodging from './pages/Lodging/Lodging'
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [locationList, setLocationList] = useState([])
@@ -21,22 +22,23 @@ function App() {
       })
   }, [])
 
-  // console.log(locationList[0].id)
-
   if (isLoading) return <div>Loading...</div>
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Home locationList={locationList} />} />
-          <Route
-            path="/lodging/:userId"
-            element={<Lodging locationList={locationList} />}
-          />
-          <Route path="About" element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+      <div className="App">
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home locationList={locationList} />} />
+            <Route
+              path="/lodging/:userId"
+              element={<Lodging locationList={locationList} />}
+            />
+            <Route path="About" element={<About />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </>
   )

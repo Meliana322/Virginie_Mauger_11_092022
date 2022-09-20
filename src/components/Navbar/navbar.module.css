@@ -1,13 +1,12 @@
-/* * {
-  font-family: Montserrat;
-} */
+/* Mobile*/
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: auto;
+  margin-inline: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .list {
@@ -34,21 +33,26 @@
   margin-right: 20px;
 }
 
+/* Tablette*/
 @media screen and (min-width: 768px) {
   .logo {
     width: 210px;
   }
 
   .link {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
+/* Desktop*/
 @media screen and (min-width: 992px) {
+  .navbar {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
   .logo {
     width: 210px;
   }
-  .list {
-  }
+
   .link {
     font-size: 24px;
   }

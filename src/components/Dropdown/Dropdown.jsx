@@ -1,21 +1,30 @@
 import React, { useState } from 'react'
 import styles from './dropdown.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import arrow from '../../assets/arrow.png'
 
 export default function Dropdown({ children, title }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
-      <div
-        onClick={() => setIsOpen((prevIsOpen) => !prevIsOpen)}
-        className="titre"
-      >
-        {title}
-        <FontAwesomeIcon icon={faChevronDown} className={styles.chevron} />
+      <div className={`${styles.dropdown} ${styles.dropdown} `}>
+        <button className={`${styles.dropdownButton} ${styles.dropdownButton}`}>
+          <span
+            onClick={() => setIsOpen((prevIsOpen) => !prevIsOpen)}
+            className={styles.dropdownButton}
+          >
+            {title}
+            <img
+              src={arrow}
+              className={styles.chevron}
+              alt=""
+              style={{ transform: isOpen ? 'rotate(180deg)' : null }}
+            />
+          </span>
+        </button>
+
+        {isOpen && <div className={styles.content}>{children}</div>}
       </div>
-      {isOpen && <div>{children}</div>}
     </>
   )
 }

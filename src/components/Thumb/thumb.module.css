@@ -1,24 +1,40 @@
 .thumb {
   position: relative;
+  height: 255px;
 }
 
 .img {
   border-radius: 10px;
-  height: 255px;
+  height: 100%;
   width: 335px;
   object-fit: cover;
 }
 
 .title {
   position: absolute;
+  width: 100%;
   display: flex;
   align-items: flex-end;
-  left: 5.8%;
-  right: 5.8%;
+  left: 10px;
   bottom: 5.8%;
-  top: 5.8%;
   width: 295px;
   color: white;
   font-size: 18px;
   line-height: 25px;
+  text-align: start;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  .thumb {
+    height: 340px;
+    margin: 32px 1% 8% 1%;
+    width: 340px;
+    overflow: hidden;
+  }
+  .thumb img {
+    width: 340px;
+  }
 }

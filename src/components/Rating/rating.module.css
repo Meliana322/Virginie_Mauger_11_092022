@@ -1,0 +1,45 @@
+.rating {
+  display: flex;
+  flex-wrap: nowrap;
+  height: inherit;
+  align-items: center;
+}
+
+.starFull {
+  width: 15px;
+  height: 15px;
+}
+
+.starEmpty {
+  width: 15px;
+  height: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .rating {
+    height: 48px;
+  }
+  .starFull {
+    width: 22px;
+    height: 22px;
+  }
+
+  .starEmpty {
+    width: 22px;
+    height: 22px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .rating {
+    margin-top: 20px;
+  }
+  .starFull {
+    width: 30px;
+    height: 30px;
+  }
+
+  .starEmpty {
+    width: 30px;
+    height: 30px;
+  }
+}

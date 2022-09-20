@@ -1,0 +1,29 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dropdown.titre-dropdown {
+  margin-bottom: 20px;
+  background-color: #ff6060;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 768px) {
+  /* .dropdown {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  } */
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown {
+    flex-direction: column;
+  }
+  .banner-about {
+    margin-top: -460px;
+  }
+}
