@@ -9,14 +9,10 @@
   background-color: #ff6060;
   flex-direction: row;
 }
-
-@media screen and (min-width: 768px) {
-  /* .dropdown {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 100%;
-  } */
+.image {
+  height: 223px;
+  border-radius: 25px;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 992px) {
