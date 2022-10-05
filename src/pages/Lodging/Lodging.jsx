@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import styles from './lodging.module.css'
 import Host from '../../components/Host/Host'
 import Dropdown from '../../components/Dropdown/Dropdown'
@@ -9,14 +9,11 @@ import Tags from '../../components/Tags/Tags'
 
 export default function Lodging(props) {
   const { userId } = useParams()
-  const navigate = useNavigate()
   const location = props.locationList
     .filter((location) => location.id === userId)
     .shift()
-
-  if (location === undefined) {
-    navigate('/404')
-    return null
+  if (location === undefined && props.locationList.length > 0) {
+    return <Navigate to="/404" />
   }
 
   return (

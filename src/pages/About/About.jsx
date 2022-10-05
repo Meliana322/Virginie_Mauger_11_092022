@@ -7,7 +7,6 @@ import styles from './about.module.css'
 export default function About() {
   return (
     <>
-      {/* <Banner image={banner} className={bannerAbout.banner_about} /> */}
       <div className={styles.containerImage}>
         <img src={banner} className={styles.image} alt="" />
       </div>
