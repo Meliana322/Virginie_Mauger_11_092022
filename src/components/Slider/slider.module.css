@@ -43,9 +43,15 @@
     height: 380px;
     border-radius: 25px;
     width: 100%;
+    display: flex;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
   }
   .slider {
     height: inherit;
+    width: 100%;
   }
 
   .slider img {
@@ -64,6 +70,7 @@
   .container {
     height: 415px;
   }
+
   .slider {
     height: 415px;
   }

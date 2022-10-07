@@ -18,6 +18,7 @@ export default function Dropdown({ children, title }) {
               src={arrow}
               className={styles.chevron}
               alt=""
+              // Si isOpen rotate sinon ne fais rien
               style={{ transform: isOpen ? 'rotate(180deg)' : null }}
             />
           </span>

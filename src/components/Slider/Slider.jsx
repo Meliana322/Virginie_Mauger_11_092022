@@ -20,22 +20,28 @@ export default function Slide({ imgList, title }) {
   return (
     <>
       <div className={styles.container}>
-        <button
-          className={styles.prevSlide}
-          onClick={() => {
-            prevSlide()
-          }}
-        >
-          <img src={arrowLeft} className={styles.chevron} alt="" />
-        </button>
-        <button
-          className={styles.nextSlide}
-          onClick={() => {
-            nextSlide()
-          }}
-        >
-          <img src={arrowRight} className={styles.chevron} alt="" />
-        </button>
+        {/* Les chevrons ne s'affichent pas si une seule photo */}
+        {length > 1 && (
+          <div className={styles.buttons}>
+            <button
+              className={styles.prevSlide}
+              onClick={() => {
+                prevSlide()
+              }}
+            >
+              <img src={arrowLeft} className={styles.chevron} alt="" />
+            </button>
+            <button
+              className={styles.nextSlide}
+              onClick={() => {
+                nextSlide()
+              }}
+            >
+              <img src={arrowRight} className={styles.chevron} alt="" />
+            </button>
+          </div>
+        )}
+
         <div className={styles.slider}>
           <img src={imgList[current]} alt={title} />
         </div>

@@ -9,17 +9,19 @@ import Tags from '../../components/Tags/Tags'
 
 export default function Lodging(props) {
   const { userId } = useParams()
+  // Va chercher dans la liste, filtres par id, récupère moi le premier et mets le dans location
   const location = props.locationList
     .filter((location) => location.id === userId)
     .shift()
+  // Si Location est undefined et que le tableau des Locations n'est pas vide alors rends le composant Navigate(404)
   if (location === undefined && props.locationList.length > 0) {
+    // "Navigate" change l'emplacement actuel lorsqu'il est rendu
     return <Navigate to="/404" />
   }
 
   return (
     <>
       <Slide imgList={location.pictures} title={location.title} />
-
       <section className={styles.container_description}>
         <div className={styles.container}>
           <div className={styles.info}>
